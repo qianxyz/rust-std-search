@@ -5,9 +5,12 @@ from collections import deque
 from urllib.parse import urljoin
 from bs4 import BeautifulSoup
 
+# The paths must end with a trailing slash
+# since we remove them as prefix to get a relative path.
+
 BASE_URL = "https://doc.rust-lang.org/std/"
 
-OUTPUT_DIR = "./tmp/html"
+OUTPUT_DIR = "./tmp/html/"
 
 
 def _main():
